@@ -51,12 +51,12 @@ get_header();
 
 $category = get_the_category($query2->post->ID);
 
-echo "<h1>".category_description($category[0])."</h1>";
+
  // The 2nd Loop
  echo '<ol>';
  while ( $query2->have_posts() ) {
      $query2->the_post();    
-     echo '<li><a href='.get_permalink().' target=blank>' . get_the_title() . '</a>';
+     echo '<li style=display:none;><a href='.get_permalink().' target=blank>' . get_the_title() . '</a>';
      echo '<p class=session>session: '.substr(get_the_title(), 4, 1).'</p>';
      echo '<p class=domaine>domaine: ' .substr(get_the_title(), 5, 1).'</p>';
      get_template_part("template-parts/cours");
@@ -89,6 +89,38 @@ echo "<h6>".category_description($category[0])."</h6>";
        echo '</div>';
    }
    echo '</div>';*/
+
+ ?>
+
+ <?php
+
+$args3 = array(
+    "category_name"=>"cours",
+    "posts_per_page"=>"-1",
+    "orderby"=>"title",
+    "order"=>"asc"
+);
+
+ /*The 2nd Query (without global var) */
+ $query2 = new WP_Query( $args3 );
+  
+
+$category = get_the_category($query2->post->ID);
+
+echo "<h1>".category_description($category[0])."</h1>";
+
+   echo "<div id=grid>";
+    while ( $query2->have_posts() ) {
+     $query2->the_post();    
+     $session =  substr(get_the_title(), 4, 1);
+     $domaine =  substr(get_the_title(), 5, 1);
+     echo '<div class=gridElement style=grid-area:'.$session.'/'.$domaine.'/'.($session+1).'/'.($domaine+1).'><a href='.get_permalink().' target=blank>' . substr(get_the_title(), 0, 7) . '</div>';
+    
+    }
+    echo "</div>";
+  
+ // Restore original Post Data
+ wp_reset_postdata();
 
  ?>
 

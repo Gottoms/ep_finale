@@ -138,54 +138,27 @@ h1 p {
   color: #ff4343;
 }
 
-.oGrid {
+#grid {
+  width: 100%;
+  height: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[30];
-      grid-template-rows: repeat(30, 1fr);
-  height: auto;
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: rgba(255, 128, 128, 0.205);
-  padding: 5px;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
 }
 
-.oGrid div {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-top: 5px;
-  padding: 3px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#grid .gridElement {
+  display: block;
+  border: 1px solid black;
 }
 
-.oGrid div p {
-  text-align: center;
-  width: 100%;
-  height: 10px;
-  margin-top: 15px;
+#grid .gridElement:nth-child(3), #grid .gridElement:nth-child(9), #grid .gridElement:nth-child(11), #grid .gridElement:nth-child(14), #grid .gridElement:nth-child(17), #grid .gridElement:nth-child(20), #grid .gridElement:nth-child(25) {
+  margin-top: 30px;
 }
 
-.septembre {
-  background-color: #ff6767;
-}
-
-.octobre {
-  background-color: #67ffb8;
-}
-
-.novembre {
-  background-color: #67d4ff;
+#grid .gridElement:nth-child(15), #grid .gridElement:nth-child(21) {
+  margin-top: 60px;
 }
 /*# sourceMappingURL=style.css.map */
