@@ -39,7 +39,9 @@ get_header();
   */
  wp_reset_postdata();
  $args2 = array(
-    "category_name"=>"conferences");
+    "category_name"=>"cours",
+    "posts_per_page"=>"10"
+);
 
  /*The 2nd Query (without global var) */
  $query2 = new WP_Query( $args2 );
@@ -51,10 +53,8 @@ echo "<h1>".category_description($category[0])."</h1>";
  // The 2nd Loop
  while ( $query2->have_posts() ) {
      $query2->the_post();
-     echo '<div class="divConference" style="background-color:white; padding:1%;">';
-     echo '<h4>' . get_the_title() . ' - ' . get_the_date() . '</h4>';
-     echo get_the_post_thumbnail(null,"thumbnail");
-     echo  the_excerpt();
+     echo '<div">';
+     echo '<h4>' . get_the_title() . '</h4>';
      echo '</div>';
  }
   
@@ -62,7 +62,7 @@ echo "<h1>".category_description($category[0])."</h1>";
  wp_reset_postdata();
 
 
- $args = array(
+/* $args = array(
     "category_name"=>"nouvelle");
 // The Query
 
@@ -82,7 +82,7 @@ echo "<h6>".category_description($category[0])."</h6>";
        echo get_the_post_thumbnail(null,"thumbnail");
        echo '</div>';
    }
-   echo '</div>';
+   echo '</div>';*/
 
  ?>
 
