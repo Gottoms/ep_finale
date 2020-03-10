@@ -1,0 +1,62 @@
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+}
+
+#app {
+
+    margin: 0!important;
+
+}
+
+.container {
+
+    margin: 0;
+
+}
+
+.navbar {
+
+    width: 100%;
+
+    #navbarNavDropdown {
+        #menu-menu {
+
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            li {
+
+                .nav-link {
+
+                    color: white!important;
+                    transition: color .2s;
+
+                    &:hover {
+
+                        color: $color_hover!important;
+
+                    }
+
+                    &:focus {
+
+                        color: $color_focus!important;
+
+                    }
+
+                    &:active {
+
+                        color: $color_active!important;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

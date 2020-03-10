@@ -2,23 +2,10 @@ body{
     overflow:auto;
 }
 
-
-.animation1{
-    animation:animationRectangle1;
-    animation-duration:1s;
-    text-align:center;
-    border-radius:25px;
-    animation-timing-function: ease-in-out;
-}
-
 .lirePost{
     background-color:lightgreen;
 }
 
-
-.active{
-    background-color:red;
-}
 .divConference {
     background-color:white !important;
 }
@@ -52,21 +39,6 @@ body{
     flex-direction:column;
 }
 
-
-@keyframes animationRectangle1{
-    from{
-        transform:translateX(-1500px);
-        opacity:0;
-        background-color:transparent;
-    }
-
-    to{
-        transform:translateX(0px);
-        opacity:1;
-        
-    }
-}
-
 h1 {
 
 
@@ -77,5 +49,17 @@ h1 {
         
     }
     
+
+}
+
+.session {
+
+    color: blue;
+
+}
+
+.domaine {
+
+    color: red;
 
 }

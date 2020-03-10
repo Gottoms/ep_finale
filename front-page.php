@@ -40,6 +40,9 @@ get_header();
  wp_reset_postdata();
  $args2 = array(
     "category_name"=>"cours",
+    "posts_per_page"=>"-1",
+    "orderby"=>"title",
+    "order"=>"asc"
 );
 
  /*The 2nd Query (without global var) */
@@ -50,12 +53,16 @@ $category = get_the_category($query2->post->ID);
 
 echo "<h1>".category_description($category[0])."</h1>";
  // The 2nd Loop
+ echo '<ol>';
  while ( $query2->have_posts() ) {
-     $query2->the_post();
-     echo '<div">';
-     echo '<h4>' . get_the_title() . '</h4>';
-     echo '</div>';
- }
+     $query2->the_post();    
+     echo '<li><a href='.get_permalink().' target=blank>' . get_the_title() . '</a>';
+     echo '<p class=session>session: '.substr(get_the_title(), 4, 1).'</p>';
+     echo '<p class=domaine>domaine: ' .substr(get_the_title(), 5, 1).'</p>';
+     get_template_part("template-parts/cours");
+    
+    }
+ echo '</ol>';
   
  // Restore original Post Data
  wp_reset_postdata();

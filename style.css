@@ -25,45 +25,47 @@ body {
   color: white;
 }
 
-li a:hover {
-  color: #34d6ff !important;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  letter-spacing: 1px;
+#app {
+  margin: 0 !important;
 }
 
-li a:hover:after {
-  content: "";
-  /* This is necessary for the pseudo element to work. */
-  display: block;
-  /* This will put the pseudo element on its own line. */
-  margin: 0 auto;
-  /* This will center the border. */
-  width: 95%;
-  /* Change this to whatever width you want. */
-  /* This creates some space between the element and the border. */
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-  padding-top: 1%;
-  border-bottom: 1px solid white;
-  /* This creates the border. Replace black with whatever color you want. */
+.container {
+  margin: 0;
 }
 
-li a {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  padding: 0 !important;
+.navbar {
+  width: 100%;
 }
 
-li a:after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  width: 0%;
-  border-bottom: 1px solid white;
-  padding-top: 1%;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
+.navbar #navbarNavDropdown #menu-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar #navbarNavDropdown #menu-menu li .nav-link {
+  color: white !important;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.navbar #navbarNavDropdown #menu-menu li .nav-link:hover {
+  color: #757575 !important;
+}
+
+.navbar #navbarNavDropdown #menu-menu li .nav-link:focus {
+  color: #3d3d3d !important;
+}
+
+.navbar #navbarNavDropdown #menu-menu li .nav-link:active {
+  color: #777777 !important;
 }
 
 p {
@@ -74,23 +76,8 @@ body {
   overflow: auto;
 }
 
-.animation1 {
-  -webkit-animation: animationRectangle1;
-          animation: animationRectangle1;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  text-align: center;
-  border-radius: 25px;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-
 .lirePost {
   background-color: lightgreen;
-}
-
-.active {
-  background-color: red;
 }
 
 .divConference {
@@ -138,37 +125,17 @@ body {
           flex-direction: column;
 }
 
-@-webkit-keyframes animationRectangle1 {
-  from {
-    -webkit-transform: translateX(-1500px);
-            transform: translateX(-1500px);
-    opacity: 0;
-    background-color: transparent;
-  }
-  to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes animationRectangle1 {
-  from {
-    -webkit-transform: translateX(-1500px);
-            transform: translateX(-1500px);
-    opacity: 0;
-    background-color: transparent;
-  }
-  to {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 h1 p {
   font-size: 1.3em;
   text-align: center;
+}
+
+.session {
+  color: blue;
+}
+
+.domaine {
+  color: red;
 }
 
 .oGrid {
