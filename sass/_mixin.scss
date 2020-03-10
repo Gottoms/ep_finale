@@ -1,0 +1,19 @@
+@mixin rayures ($col1, $col2, $col3, $col4){
+
+    #cat_grid {
+
+        p {
+
+            background: repeating-linear-gradient(
+            -45deg,
+            $col1,
+            $col2 10px,
+            $col3 10px,
+            $col4 20px
+            );
+
+        }
+
+    }
+
+}

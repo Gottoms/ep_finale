@@ -109,6 +109,8 @@ $category = get_the_category($query2->post->ID);
 
 echo "<h1>".category_description($category[0])."</h1>";
 
+echo "<div id=cat_grid><p>Environnement</p><p>Animation</p><p>Design</p><p>Programmation</p><p>Intégration</p></div>";
+
    echo "<div id=grid>";
     while ( $query2->have_posts() ) {
      $query2->the_post();    
