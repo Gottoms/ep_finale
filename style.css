@@ -170,7 +170,7 @@ h1 p {
 }
 
 #cat_grid p {
-  background: repeating-linear-gradient(-45deg, #21b4ff, #21b4ff 10px, #009be9 10px, #009be9 20px);
+  background: repeating-linear-gradient(-45deg, #21b4ff, #21b4ff 15px, #009be9 15px, #009be9 25px);
 }
 
 #grid {
