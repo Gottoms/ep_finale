@@ -1,0 +1,224 @@
+/*
+ Theme Name:   astral Child
+ Theme URI:    http://example.com/astral-child/
+ Description:  astral Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     astral
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  astralchild
+*/
+h1, h2, h3, h4, h5, h6 {
+  color: #1b97b6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #d8d8d8 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+li a:hover {
+  color: #34d6ff !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  letter-spacing: 1px;
+}
+
+li a:hover:after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: 95%;
+  /* Change this to whatever width you want. */
+  /* This creates some space between the element and the border. */
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  padding-top: 1%;
+  border-bottom: 1px solid white;
+  /* This creates the border. Replace black with whatever color you want. */
+}
+
+li a {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 0 !important;
+}
+
+li a:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 0%;
+  border-bottom: 1px solid white;
+  padding-top: 1%;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+p {
+  font-weight: bold;
+}
+
+body {
+  overflow: auto;
+}
+
+.animation1 {
+  -webkit-animation: animationRectangle1;
+          animation: animationRectangle1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  text-align: center;
+  border-radius: 25px;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.lirePost {
+  background-color: lightgreen;
+}
+
+.active {
+  background-color: red;
+}
+
+.divConference {
+  background-color: white !important;
+}
+
+.divConference h4 {
+  position: absolute;
+  left: 12%;
+}
+
+.divConference p {
+  display: inline-block;
+  margin-left: 2%;
+  width: 35%;
+  height: 180px;
+  padding-top: 3%;
+}
+
+.divConference img {
+  float: left;
+  clear: both;
+}
+
+.oFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.oPost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@-webkit-keyframes animationRectangle1 {
+  from {
+    -webkit-transform: translateX(-1500px);
+            transform: translateX(-1500px);
+    opacity: 0;
+    background-color: transparent;
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes animationRectangle1 {
+  from {
+    -webkit-transform: translateX(-1500px);
+            transform: translateX(-1500px);
+    opacity: 0;
+    background-color: transparent;
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+h1 p {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.oGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[30];
+      grid-template-rows: repeat(30, 1fr);
+  height: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgba(255, 128, 128, 0.205);
+  padding: 5px;
+}
+
+.oGrid div {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.oGrid div p {
+  text-align: center;
+  width: 100%;
+  height: 10px;
+  margin-top: 15px;
+}
+
+.septembre {
+  background-color: #ff6767;
+}
+
+.octobre {
+  background-color: #67ffb8;
+}
+
+.novembre {
+  background-color: #67d4ff;
+}
+/*# sourceMappingURL=style.css.map */

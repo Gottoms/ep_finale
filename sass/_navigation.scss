@@ -1,0 +1,37 @@
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+}
+
+li a:hover{
+    color:rgb(52, 214, 255) !important;
+    transition:all 0.5s;
+    letter-spacing: 1px;
+    
+    &:after {
+        content: ""; /* This is necessary for the pseudo element to work. */ 
+        display: block; /* This will put the pseudo element on its own line. */
+        margin: 0 auto; /* This will center the border. */
+        width: 95%; /* Change this to whatever width you want. */
+         /* This creates some space between the element and the border. */
+        transition:0.5s all;
+        padding-top:1%;
+        border-bottom: 1px solid rgb(255, 255, 255); /* This creates the border. Replace black with whatever color you want. */
+    }
+}
+
+li a{
+    transition:all 0.5s;
+    padding:0 !important;
+
+    &:after{
+        content:"";
+        display:block;
+        margin:0 auto;
+        width:0%;
+        border-bottom:1px solid white;
+        padding-top:1%;
+        transition:0.5s all;
+    }
+}
+
+

@@ -1,0 +1,81 @@
+body{
+    overflow:auto;
+}
+
+
+.animation1{
+    animation:animationRectangle1;
+    animation-duration:1s;
+    text-align:center;
+    border-radius:25px;
+    animation-timing-function: ease-in-out;
+}
+
+.lirePost{
+    background-color:lightgreen;
+}
+
+
+.active{
+    background-color:red;
+}
+.divConference {
+    background-color:white !important;
+}
+
+.divConference h4{
+    position:absolute; 
+    left:12%;
+}
+.divConference p{
+    display:inline-block;
+    margin-left:2%;
+    width:35%;
+    height:180px;
+    padding-top:3%;
+}
+
+.divConference img{
+    float:left;
+    clear: both;
+}
+
+.oFlex{
+    display:flex;
+    width:100%;
+    height:auto;
+    justify-content: space-around;
+}
+.oPost{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+}
+
+
+@keyframes animationRectangle1{
+    from{
+        transform:translateX(-1500px);
+        opacity:0;
+        background-color:transparent;
+    }
+
+    to{
+        transform:translateX(0px);
+        opacity:1;
+        
+    }
+}
+
+h1 {
+
+
+    p {
+
+        font-size: 1.3em;
+        text-align: center;
+        
+    }
+    
+
+}
