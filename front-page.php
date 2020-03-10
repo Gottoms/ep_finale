@@ -40,7 +40,6 @@ get_header();
  wp_reset_postdata();
  $args2 = array(
     "category_name"=>"cours",
-    "posts_per_page"=>"10"
 );
 
  /*The 2nd Query (without global var) */
